@@ -120,4 +120,10 @@ def upload():
     arquivo.save(os.path.join('../imagem/', nome_arquivo))
     return redirect('/livros')
 
+
 app.run(debug=True)
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app)
