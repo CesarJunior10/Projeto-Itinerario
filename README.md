@@ -22,3 +22,9 @@ pip install -r requirements.txt
 2. SQLAlchemy as ORM
 3. Pydantic for data validation and settings management
 4. Alembic for database migration
+
+
+For help, type:
+```shell
+make help
+```

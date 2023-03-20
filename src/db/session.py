@@ -18,5 +18,6 @@ def get_db() -> Generator:
     finally:
         session.close()
 
+
 def init_db() -> None:
     Base.metadata.create_all()

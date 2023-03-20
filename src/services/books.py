@@ -13,9 +13,7 @@ def list_books(db: Session) -> List[dict]:
 
 
 def get_book_by_id(book_id: int, db: Session) -> dict:
-    book = db.execute(
-        "SELECT * FROM livros WHERE id=:id", {"id": book_id}
-    ).fetchone()
+    book = db.execute("SELECT * FROM livros WHERE id=:id", {"id": book_id}).fetchone()
     if not book:
         raise BookNotFound(book_id)
     return dict(book)
@@ -42,5 +40,5 @@ def remove_book(book_id: int, db: Session):
     book: Optional[Book] = db.query(Book).filter_by(id=book_id).first()
     if not book:
         raise BookNotFound(book_id)
-    db.delete(book) 
+    db.delete(book)
     db.commit()
