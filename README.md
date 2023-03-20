@@ -1,5 +1,10 @@
 # Projeto-Itinerario
 
+## Requirements:
+* Python 3.9+
+* Docker
+* Docker compose
+
 ## Setup
 Create a virtual environment:
 ```shell
@@ -16,15 +21,14 @@ and install dependencies
 pip install -r requirements.txt
 ```
 
+For help, type:
+```shell
+make help
+```
+
 
 ## Libraries and tools
 1. FastAPI + uvicorn as web framework
 2. SQLAlchemy as ORM
 3. Pydantic for data validation and settings management
 4. Alembic for database migration
-
-
-For help, type:
-```shell
-make help
-```
